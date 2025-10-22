@@ -27,8 +27,8 @@ def wait_for_harvest():
 	while not can_harvest():
 		continue
 
-def onwards_for_shortest(frm, to):
-	if abs(frm - to) < get_world_size()/2:
+def onwards_for_shortest(start, fin):
+	if abs(start - fin) < get_world_size() :
 		return True
 	return False
 
@@ -36,3 +36,11 @@ def abs(n):
 	if n < 0:
 		return n*-1
 	return n
+	
+def harvest_all_to_clear():
+	go_to_pos(0,0)
+	for i in range(get_world_size()):
+		for j in range(get_world_size()):
+			harvest()
+			move(North)
+		move(East)
