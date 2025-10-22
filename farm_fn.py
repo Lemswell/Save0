@@ -45,7 +45,7 @@ def pumpkin_farm(x_from, x_to, y_from, y_to):
 		g_fn.go_to_pos(get_pos_x(), y_from)
 		move(East) 
 
-def megapumpkin_farm_no_fert(x_from, x_to, y_from, y_to):
+def pumpkin_field_farm_no_fert(x_from, x_to, y_from, y_to):
 	g_fn.go_to_pos(x_from, y_from)
 	x_loc = []
 	y_loc = []
@@ -62,7 +62,6 @@ def megapumpkin_farm_no_fert(x_from, x_to, y_from, y_to):
 	
 	for i in range(x_from, x_to):
 		for y in range(y_from, y_to):
-			# wait func
 			while not can_harvest():
 				if get_entity_type() == Entities.Dead_Pumpkin:
 					x_loc.append(get_pos_x())

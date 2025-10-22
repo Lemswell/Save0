@@ -28,7 +28,7 @@ def wait_for_harvest():
 		continue
 
 def onwards_for_shortest(start, fin):
-	if abs(start - fin) < get_world_size() :
+	if abs(start - fin) < get_world_size()/2 :
 		return True
 	return False
 
@@ -44,3 +44,4 @@ def harvest_all_to_clear():
 			harvest()
 			move(North)
 		move(East)
+

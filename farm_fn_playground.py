@@ -7,6 +7,8 @@ import g_fn
 
 # TODO: cacti corner/perim
 	#
+	
+# TODO: Impl watering
 
 def cacti_rect_farm(x_from, x_to, y_from, y_to):
 	g_fn.go_to_pos(x_from, y_from)
@@ -81,7 +83,8 @@ def pumpkin_field_farm_no_fert(x_from, x_to, y_from, y_to):
 				
 	harvest()
 				
-g_fn.harvest_all_to_clear()
+# g_fn.harvest_all_to_clear()
+# clear()
 setup_fn.till_defined(0,8,0,8)
 while True:
 	pumpkin_field_farm_no_fert(0,8,0,8)
